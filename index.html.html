@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RØRTEK VVS & BYGG AS - Totalleverandør i Oslo & Akershus</title>
+    <meta name="description" content="RØRTEK VVS & BYGG AS - Allsidig og erfaren totalleverandør innen VVS- og byggtjenester. 24/7 vakt, fagkompetanse og mange års erfaring.">
+    
+    <!-- Schema Markup for Reviews -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "RØRTEK VVS & BYGG AS",
+      "telephone": "+47-966-84-353",
+      "email": "post@rortekvvsbygg.no",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Oslo og Akershus",
+        "addressCountry": "NO"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      },
+      "openingHours": "Mo-Su 00:00-24:00",
+      "serviceArea": ["Oslo", "Akershus"]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fbbf24;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #e5e7eb;
+            margin-top: 0.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: #fbbf24;
+        }
+
+        .emergency-contact {
+            background: #dc2626;
+            padding: 0.8rem 1.2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .emergency-contact:hover {
+            background: #b91c1c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            color: #e5e7eb;
+        }
+
+        .hero .description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature h3 {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #fbbf24;
+            color: #1e3a8a;
+        }
+
+        .btn-primary:hover {
+            background: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        /* Emergency Banner */
+        .emergency-banner {
+            background: #dc2626;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .emergency-banner a {
+            color: #fbbf24;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+
+        /* Contact Info Section */
+        .contact-info {
+            background: #f8fafc;
+            padding: 4rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .contact-item.emergency-highlight {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+        }
+
+        .contact-item.emergency-highlight h3 {
+            color: #fbbf24;
+        }
+
+        .contact-item.emergency-highlight a {
+            color: #fbbf24 !important;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Section Styles */
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
+        }
+
+        /* Service Detail Pages */
+        .service-detail {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .service-detail:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .service-title {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .service-info {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-info h3 {
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .service-info ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .service-info li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .service-info li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #1e3a8a;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            font-weight: 600;
+        }
+
+        .highlight-box h4 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-details {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .contact-details h3 {
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .contact-detail-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 40px;
+        }
+
+        .map-container {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-info h3 {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        .footer-actions {
+            text-align: right;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 1rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Floating Action Buttons */
+        .floating-actions {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .floating-btn {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .floating-call {
+            background: #dc2626;
+            color: white;
+        }
+
+        .floating-order {
+            background: #fbbf24;
+            color: #1e3a8a;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .service-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-actions {
+                text-align: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-item.emergency-highlight {
+                transform: none;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section spacing */
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        #rorleggertjenester, #serviceavtale, #varmeanlegg, #kjoling, #sprinkler, #prosjektering, #energiradgivning {
+            scroll-margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">RØRTEK VVS & BYGG AS</div>
+                    <div class="tagline">Oslo & Akershus • VVS • Bygg • Service</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#rorleggertjenester">Rørleggertjenester</a></li>
+                        <li><a href="#serviceavtale">Serviceavtale</a></li>
+                        <li><a href="#varmeanlegg">Varmeanlegg</a></li>
+                        <li><a href="#kjoling">Kjøling</a></li>
+                        <li><a href="#sprinkler">Sprinkler</a></li>
+                        <li><a href="#prosjektering">Prosjektering</a></li>
+                        <li><a href="#energiradgivning">Energirådgivning</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:+4796684353" class="emergency-contact">
+                    🚨 24/7 VAKT: +47 966 84 353
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        🚨 AKUTT BEHOV? VI ER TILGJENGELIGE 24/7 - RING NÅ: 
+        <a href="tel:+4796684353">+47 966 84 353</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>RØRTEK VVS & BYGG AS</h1>
+            <p class="subtitle">Allsidig og erfaren totalleverandør i Oslo & Akershus</p>
+            <p class="description">
+                RØRTEK VVS & BYGG AS er en allsidig og erfaren totalleverandør innen VVS- og byggtjenester, 
+                med fokus på kvalitet, trygghet og gode løsninger for både private kunder og næringsliv. 
+                Med fagkompetanse og mange års erfaring i bransjen leverer vi alt fra rådgivning og planlegging 
+                til utførelse og vedlikehold og service — alltid med kunden i sentrum.
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>🔧 Fagkompetanse</h3>
+                    <p>Faglærte rørleggere og ingeniører med høy kompetanse</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Rask respons</h3>
+                    <p>Effektiv service og strukturert gjennomføring</p>
+                </div>
+                <div class="feature">
+                    <h3>🛡️ Trygghet</h3>
+                    <p>Kvalitet i alle ledd med fokus på løsninger som varer</p>
+                </div>
+                <div class="feature">
+                    <h3>🚨 24/7 Vakt</h3>
+                    <p>Alltid tilgjengelig ved akutte situasjoner - ring når som helst</p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="tel:+4796684353" class="btn btn-primary">🚨 Ring 24/7 Vakt</a>
+                <a href="#kontakt" class="btn btn-secondary">Kontakt oss</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="container">
+            <h2 class="section-title">Kontakt & nøkkelinformasjon</h2>
+            <p class="section-subtitle">Rask kontakt ved service og akutt behov.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Telefon</h3>
+                    <p><strong><a href="tel:+4796684353" style="color: #1e3a8a; text-decoration: none; font-size: 1.1rem;">+47 966 84 353</a></strong></p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h3>E-post</h3>
+                    <p><a href="mailto:post@rortekvvsbygg.no" style="color: #1e3a8a; text-decoration: none;">post@rortekvvsbygg.no</a></p>
+                </div>
+                <div class="contact-item emergency-highlight">
+                    <div class="contact-icon">🚨</div>
+                    <h3>24/7 VAKT</h3>
+                    <p><strong><a href="tel:+4796684353" style="color: #fbbf24; text-decoration: none; font-size: 1.3rem;">+47 966 84 353</a></strong></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Alltid tilgjengelig ved akutte situasjoner</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Dekningsområde</h3>
+                    <p><strong>Oslo & Akershus</strong></p>
+                    <p style="color: #6b7280; margin-top: 0.5rem;">Komplett VVS- og byggtjenester</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generelle Rørleggertjenester -->
+    <section id="rorleggertjenester" class="service-detail">
+        <div class="container">
+            <div class="service-header">
+                <h2 class="service-title">Generelle Rørleggertjenester</h2>
+                <p class="service-description">
+                    Komplett rørleggerservice – trygt, effektivt og profesjonelt. 
+                    Hos RØRTEK VVS & Bygg AS tilbyr vi et bredt spekter av rørleggertjenester – 
+                    fra mindre serviceoppdrag som utskifting av kjøkkenkran og reparasjon av VVS-utstyr, 
+                    til komplette rehabiliteringer og større prosjekter både innendørs og utendørs.
+                </p>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>🔧 Når bør du kontakte rørlegger?</h3>
+                    <p>Du bør ta kontakt med rørlegger dersom du opplever:</p>
+                    <ul>
+                        <li>Lekkasjer eller fuktproblemer</li>
+                        <li>Dårlig vanntrykk</li>
+                        <li>Problemer med varmtvann</li>
+                        <li>Tette rør eller avløp</li>
+                        <li>Behov for oppussing av bad eller kjøkken</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 2rem;">🛡️ Forebyggende service</h3>
+                    <ul>
+                        <li>Kontroll og service av varmtvannsbereder</li>
+                        <li>Utskifting av gamle rør</li>
+                        <li>Generell gjennomgang av rørsystem</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>🏢 Våre tjenester inkluderer</h3>
+                    <ul>
+                        <li>Service og vedlikehold</li>
+                        <li>Akutt rørleggerarbeid og lekkasjer</li>
+                        <li>Baderomsrenovering og rehabilitering</li>
+                        <li>Varmtvannsberedere og vannbårne varmeløsninger</li>
+                        <li>Lekkasjesøk</li>
+                        <li>Rørfornying og utskifting av rør</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>⚡ Hvor raskt kan vi rykke ut?</h4>
+                        <p>Ved akutte situasjoner prioriterer vi rask respons og gjør vårt ytterste for å være på plass så raskt som mulig. For planlagte oppdrag avtaler vi tidspunkt som passer deg.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>💰 Hva koster en rørlegger?</h3>
+                    <p>Prisen på rørleggerarbeid varierer avhengig av:</p>
+                    <ul>
+                        <li>Type oppdrag</li>
+                        <li>Omfang og kompleksitet</li>
+                        <li>Materialvalg</li>
+                        <li>Om arbeidet er planlagt eller akutt</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">Hos oss får du alltid en tydelig vurdering av arbeidet og prisestimat før oppstart.</p>
+                </div>
+
+                <div class="service-info">
+                    <h3>🎯 Hva skiller oss fra andre?</h3>
+                    <p>Hos RØRTEK VVS & BYGG AS møter du faglærte rørleggere og ingeniører med høy kompetanse og yrkesstolthet. Vi jobber:</p>
+                    <ul>
+                        <li>Strukturert</li>
+                        <li>Ryddig</li>
+                        <li>Ansvarlig</li>
+                        <li>Med fokus på kvalitet i alle ledd</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">Vi legger stor vekt på tydelig kommunikasjon, dokumentasjon og løsninger som varer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviceavtale -->
+    <section id="serviceavtale" class="service-detail">
+        <div class="container">
+            <div class="service-header">
+                <h2 class="service-title">Serviceavtale</h2>
+                <p class="service-description">
+                    Fordeler med våre serviceavtaler - regelmessig vedlikehold som sikrer stabil drift, 
+                    reduserer risikoen for driftsstans og forlenger levetiden på anlegget.
+                </p>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>🔧 Regelmessig vedlikehold</h3>
+                    <p>Vi utfører service og vedlikehold i henhold til avtalte og anbefalte intervaller. Dette sikrer:</p>
+                    <ul>
+                        <li>Stabil drift</li>
+                        <li>Redusert risiko for driftsstans</li>
+                        <li>Forlenget levetid på anlegget</li>
+                        <li>Optimal energieffektivitet</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>📊 Tilstandsrapport og rådgivning</h3>
+                    <p>Etter gjennomført service mottar du:</p>
+                    <ul>
+                        <li>Oppdatert vurdering av anleggets tilstand</li>
+                        <li>Konkrete anbefalinger om eventuelle tiltak</li>
+                        <li>Forslag til forbedringer</li>
+                        <li>Forebyggende tiltak mot kostbare reparasjoner</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>🛡️ Opprettholdelse av garanti</h3>
+                    <p>Mange leverandører stiller krav om periodisk service for at garantier og reklamasjonsrett skal være gyldige.</p>
+                    <ul>
+                        <li>Sikrer gyldige garantier</li>
+                        <li>Opprettholder reklamasjonsrett</li>
+                        <li>Dokumentert vedlikehold</li>
+                        <li>Samsvar med leverandørkrav</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>🏢 Fleksible avtaler</h3>
+                    <p>Vi tilbyr skreddersydde serviceavtaler tilpasset:</p>
+                    <ul>
+                        <li>Private boliger</li>
+                        <li>Sameier og borettslag</li>
+                        <li>Næringsbygg og bedrifter</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">Avtalene tilpasses størrelse, behov og budsjett.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Varmeanlegg -->
+    <section id="varmeanlegg" class="service-detail">
+        <div class="container">
+            <div class="service-header">
+                <h2 class="service-title">Varmeanlegg</h2>
+                <p class="service-description">
+                    Hva kan en fagkompetent bedrift hjelpe med? Fra prosjektering og dimensjonering 
+                    til installasjon av moderne varmeløsninger og energieffektivisering.
+                </p>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>🔥 Prosjektering og dimensjonering</h3>
+                    <p>Riktig dimensjonering av varmeanlegget er avgjørende for effektiv drift:</p>
+                    <ul>
+                        <li>Beregning av effektbehov</li>
+                        <li>Energibruksanalyse</li>
+                        <li>Optimal systemløsning</li>
+                        <li>Tilpasset byggets størrelse og bruk</li>
+                        <li>Tekniske krav og forskrifter</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>⚙️ Installasjon av moderne varmeløsninger</h3>
+                    <p>Vi leverer og installerer blant annet:</p>
+                    <ul>
+                        <li>Vannbårne varmeanlegg</li>
+                        <li>Gulvvarme</li>
+                        <li>Radiatorsystemer</li>
+                        <li>Varmepumper</li>
+                        <li>Fjernvarmetilknytning</li>
+                        <li>Energieffektive kjel- og beredersystemer</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>📊 Energieffektivisering</h3>
+                    <p>Gjennom analyse av eksisterende anlegg kan vi identifisere tiltak som reduserer energiforbruk:</p>
+                    <ul>
+                        <li>Oppgradering av styringssystemer</li>
+                        <li>Optimalisering av temperaturkurver</li>
+                        <li>Utskifting av gamle komponenter</li>
+                        <li>Betydelige besparelser på energikostnader</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>🛠️ Service og vedlikehold</h3>
+                    <p>Regelmessig vedlikehold sikrer stabil drift:</p>
+                    <ul>
+                        <li>Kontroll av trykk og ekspansjonssystem</li>
+                        <li>Gjennomgang av ventiler og pumper</li>
+                        <li>Kontroll av styrings- og reguleringssystem</li>
+                        <li>Dokumentasjon og tilstandsrapport</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>📡 Smarte styringssystemer</h4>
+                        <p>Vi leverer moderne styrings- og overvåkningsløsninger som gir full kontroll over energibruk og temperatur – lokalt eller via fjernstyring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kjøling -->
+    <section id="kjoling" class="service-detail">
+        <div class="container">
+            <div class="service-header">
+                <h2 class="service-title">Kjøleanlegg</h2>
+                <p class="service-description">
+                    Effektiv kjøling for stabil drift og godt inneklima. Et moderne kjøleanlegg er avgjørende 
+                    for komfort, driftssikkerhet og energieffektivitet – både i næringsbygg, tekniske rom, 
+                    industri og boligprosjekter.
+                </p>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>❄️ Komplett kjøleløsninger</h3>
+                    <p>Riktig løsning sikrer:</p>
+                    <ul>
+                        <li>Stabil temperatur</li>
+                        <li>Beskyttelse av teknisk utstyr</li>
+                        <li>Reduserte energikostnader</li>
+                        <li>Optimalt inneklima</li>
+                        <li>Driftssikkerhet</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>🏢 Anvendelsesområder</h3>
+                    <p>Vi leverer kjøleløsninger til:</p>
+                    <ul>
+                        <li>Næringsbygg</li>
+                        <li>Tekniske rom</li>
+                        <li>Industri</li>
+                        <li>Boligprosjekter</li>
+                        <li>Serverrom og datasentre</li>
+                        <li>Lager og produksjonslokaler</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>🔧 Fagkompetanse</h4>
+                        <p>En bedrift med høy fagkompetanse innen kjøle- og VVS-tekniske anlegg kan levere helhetlige og fremtidsrettede løsninger tilpasset byggets behov.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sprinkler -->
+    <section id="sprinkler" class="service-detail">
+        <div class="container">
+            <div class="service-header">
+                <h2 class="service-title">Sprinkleranlegg</h2>
+                <p class="service-description">
+                    Trygghet gjennom pålitelig brannsikring. Et sprinkleranlegg er en av de mest effektive 
+                    og dokumenterte løsningene for brannsikring av bygg. Riktig prosjektert og vedlikeholdt 
+                    kan et sprinkleranlegg begrense eller slokke en brann i tidlig fase.
+                </p>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>🚿 Prosjektering og dimensjonering</h3>
+                    <p>Vi prosjekterer sprinkleranlegg i henhold til gjeldende regelverk:</p>
+                    <ul>
+                        <li>Riktig dimensjonering av vannforsyning</li>
+                        <li>Optimalt rørnett</li>
+                        <li>Korrekt plassering av sprinklerhoder</li>
+                        <li>Samsvar med standarder og forskrifter</li>
+                        <li>Optimal funksjon ved brann</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>🏗️ Installasjon og montering</h3>
+                    <p>Vi installerer komplette sprinkleranlegg for:</p>
+                    <ul>
+                        <li>Næringsbygg</li>
+                        <li>Sameier og borettslag</li>
+                        <li>Industri- og lagerbygg</li>
+                        <li>Offentlige bygg</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">Arbeidet utføres strukturert, dokumentert og i tett samarbeid med øvrige fag.</p>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>🔧 Service og kontroll</h3>
+                    <p>Sprinkleranlegg krever regelmessig kontroll:</p>
+                    <ul>
+                        <li>Årlig kontroll og service</li>
+                        <li>Funksjonstesting</li>
+                        <li>Kontroll av ventiler og alarmer</li>
+                        <li>Dokumentasjon i henhold til myndighetskrav</li>
+                        <li>Oppfølging av avvik og utbedringer</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>🚨 Feilsøking og utbedring</h3>
+                    <p>Ved feil eller avvik sørger vi for:</p>
+                    <ul>
+                        <li>Rask og effektiv utbedring</li>
+                        <li>Operativt anlegg til enhver tid</li>
+                        <li>Godkjent system</li>
+                        <li>Minimal nedetid</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>📊 Dokumentasjon og samsvar</h4>
+                        <p>Vi sørger for nødvendig dokumentasjon, FDV-underlag og oppfølging i henhold til gjeldende forskrifter og forsikringskrav.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prosjektering -->
+    <section id="prosjektering" class="service-detail">
+        <div class="container">
+            <div class="service-header">
+                <h2 class="service-title">Prosjektering</h2>
+                <p class="service-description">
+                    Riktig planlegging gir trygg og effektiv gjennomføring. God prosjektering er avgjørende 
+                    for et vellykket byggeprosjekt. Riktig planlagte tekniske installasjoner sikrer 
+                    energieffektiv drift, lavere livssykluskostnader og optimal funksjon i mange år fremover.
+                </p>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>📐 Behovsanalyse og rådgivning</h3>
+                    <p>Vi kartlegger byggets funksjon og tekniske krav:</p>
+                    <ul>
+                        <li>Energibehov</li>
+                        <li>Tekniske krav</li>
+                        <li>Riktig løsning fra start</li>
+                        <li>Optimal funksjonalitet</li>
+                        <li>Fremtidsrettede løsninger</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>🔥❄️ Dimensjonering av anlegg</h3>
+                    <p>Korrekt beregning sikrer optimal drift:</p>
+                    <ul>
+                        <li>Effektbehov</li>
+                        <li>Rørdimensjoner</li>
+                        <li>Pumper og styringssystemer</li>
+                        <li>Energieffektivitet</li>
+                        <li>Driftssikkerhet</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>🚿 Prosjektering av sanitær- og sprinkleranlegg</h3>
+                    <p>Vi planlegger komplette rørsystemer:</p>
+                    <ul>
+                        <li>Sikkerhet</li>
+                        <li>Kapasitet</li>
+                        <li>Forskriftsmessig utførelse</li>
+                        <li>Optimal funksjon</li>
+                        <li>Fremtidig vedlikehold</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>📊 Energivurderinger og optimalisering</h3>
+                    <p>Vi velger løsninger som:</p>
+                    <ul>
+                        <li>Reduserer energibruk</li>
+                        <li>Senker driftskostnader</li>
+                        <li>Ivaretar komfort og inneklima</li>
+                        <li>Oppfyller fremtidige energikrav</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>📁 Dokumentasjon og FDV-grunnlag</h4>
+                        <p>Vi leverer nødvendig dokumentasjon, beskrivelser og underlag for videre drift og vedlikehold.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Energirådgivning -->
+    <section id="energiradgivning" class="service-detail">
+        <div class="container">
+            <div class="service-header">
+                <h2 class="service-title">Energirådgivning</h2>
+                <p class="service-description">
+                    Hva kan en energirådgiver hjelpe med? Vi tilbyr profesjonell rådgivning 
+                    om energibruk og optimale løsninger for dine tekniske anlegg.
+                </p>
+            </div>
+
+            <div class="service-content">
+                <div class="service-info">
+                    <h3>📊 Energikartlegging og analyse</h3>
+                    <p>Vi gjennomfører grundig gjennomgang av:</p>
+                    <ul>
+                        <li>Byggets energibruk</li>
+                        <li>Tekniske installasjoner</li>
+                        <li>Driftsmønster</li>
+                        <li>Forbedringspotensial</li>
+                        <li>Energieffektiviseringsmuligheter</li>
+                    </ul>
+                </div>
+
+                <div class="service-info">
+                    <h3>🔍 Tiltaksanalyse og besparelsesberegninger</h3>
+                    <p>Vi identifiserer konkrete tiltak som kan redusere energiforbruket:</p>
+                    <ul>
+                        <li>Optimalisering av varme- og kjøleanlegg</li>
+                        <li>Oppgradering av styringssystemer</li>
+                        <li>Utskifting av gamle pumper og komponenter</li>
+                        <li>Bedre regulering og behovsstyring</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">Du får dokumenterte beregninger av forventet besparelse og tilbakebetalingstid.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin: 2rem 0;">
+                <h4>💡 Profesjonell energirådgivning</h4>
+                <p>Med vår fagkompetanse innen VVS- og byggteknikk kan vi gi deg konkrete råd om hvordan du kan optimalisere energibruken i dine tekniske anlegg. Vi fokuserer på løsninger som gir både miljøgevinst og økonomisk besparelse.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Kontakt oss</h2>
+            <p class="section-subtitle">Send en forespørsel, eller ring oss direkte. Ved akutt behov: 24/7 vakt.</p>
+            
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Bestill rørlegger</h3>
+                    <p>Fyll ut skjemaet, så tar vi kontakt så raskt som mulig.</p>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Navn *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Adresse / Postnummer</label>
+                            <input type="text" id="address" name="address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Hva gjelder det?</label>
+                            <select id="service" name="service">
+                                <option value="">Velg tjeneste</option>
+                                <option value="lekkasje">Lekkasje / akutt</option>
+                                <option value="rorleggertjenester">Generelle rørleggertjenester</option>
+                                <option value="serviceavtale">Serviceavtale</option>
+                                <option value="varmeanlegg">Varmeanlegg</option>
+                                <option value="kjoling">Kjøling</option>
+                                <option value="sprinkler">Sprinkler</option>
+                                <option value="prosjektering">Prosjektering</option>
+                                <option value="energiradgivning">Energirådgivning</option>
+                                <option value="annet">Annet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="urgency">Hast</label>
+                            <select id="urgency" name="urgency">
+                                <option value="">Velg hastighet</option>
+                                <option value="akutt">Akutt (nå)</option>
+                                <option value="24timer">Innen 24 timer</option>
+                                <option value="denne-uken">Denne uken</option>
+                                <option value="ikke-hast">Ikke hast</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description">Beskrivelse</label>
+                            <textarea id="description" name="description" placeholder="Beskriv problemet eller ønsket tjeneste..."></textarea>
+                        </div>
+                        
+                        <div class="cta-buttons">
+                            <button type="submit" class="btn btn-primary">Send forespørsel</button>
+                            <a href="tel:+4796684353" class="btn btn-secondary">🚨 Ring 24/7</a>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="contact-details">
+                    <h3>Kontaktinformasjon</h3>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">🚨</div>
+                        <div>
+                            <strong>24/7 Vakt</strong><br>
+                            <a href="tel:+4796684353" style="color: #dc2626; text-decoration: none; font-size: 1.2rem; font-weight: bold;">+47 966 84 353</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">✉️</div>
+                        <div>
+                            <strong>E-post</strong><br>
+                            <a href="mailto:post@rortekvvsbygg.no" style="color: #1e3a8a; text-decoration: none;">post@rortekvvsbygg.no</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">📍</div>
+                        <div>
+                            <strong>Dekningsområde</strong><br>
+                            Oslo & Akershus
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Oslo&output=embed" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>RØRTEK VVS & BYGG AS</h3>
+                    <p>Oslo & Akershus • VVS • Bygg • Service • Energi</p>
+                    <p style="margin-top: 1rem; color: #9ca3af;">
+                        Allsidig og erfaren totalleverandør med fagkompetanse og mange års erfaring i bransjen.
+                    </p>
+                </div>
+                <div class="footer-actions">
+                    <a href="#" class="btn btn-secondary" style="margin-right: 1rem;">Til toppen ↑</a>
+                    <a href="tel:+4796684353" class="btn btn-primary">🚨 Ring 24/7</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RØRTEK VVS & BYGG AS. Alle rettigheter reservert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <a href="tel:+4796684353" class="floating-btn floating-call" title="Ring 24/7 Vakt">🚨</a>
+        <a href="#kontakt" class="floating-btn floating-order" title="Bestill">🛠️</a>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Create mailto link with form data
+            const subject = encodeURIComponent(`Forespørsel fra ${data.name} - ${data.service || 'Generell henvendelse'}`);
+            const body = encodeURIComponent(`
+Navn: ${data.name}
+Telefon: ${data.phone}
+Adresse: ${data.address || 'Ikke oppgitt'}
+Tjeneste: ${data.service || 'Ikke spesifisert'}
+Hastighet: ${data.urgency || 'Ikke spesifisert'}
+
+Beskrivelse:
+${data.description || 'Ingen beskrivelse oppgitt'}
+
+---
+Sendt fra kontaktskjema på rortekvvsbygg.no
+            `);
+            
+            const mailtoLink = `mailto:post@rortekvvsbygg.no?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+            
+            // Show confirmation
+            alert('Takk for henvendelsen! Din e-postklient åpnes nå. Alternativt kan du ringe oss direkte på +47 966 84 353.');
+        });
+
+        // Add active class to navigation based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add some interactivity to service cards
+        document.querySelectorAll('.service-info').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to service info cards
+        document.querySelectorAll('.service-info').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
